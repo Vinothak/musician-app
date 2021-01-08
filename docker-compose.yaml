@@ -1,0 +1,8 @@
+musician-app:
+  restart: always
+  image: node-jenkins-app-example
+  build: ./node-jenkins-app-example
+  container_name: node-jenkins-app-example
+  environment:
+    - VIRTUAL_HOST=localhost
+    - VIRTUAL_PORT=3000
