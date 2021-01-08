@@ -1,7 +1,6 @@
-FROM node:12 
-WORKDIR /usr/src/app 
-COPY package*.json ./ 
-RUN npm install
-COPY . . 
-EXPOSE 8000
-CMD [ "node", "app.js" ]
+FROM mhart/alpine-node
+
+EXPOSE 3000
+WORKDIR /app
+COPY . /app
+CMD ["node", "app.js"]
